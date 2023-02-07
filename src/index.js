@@ -61,6 +61,7 @@ const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
     const entry = entries[i];
     if (typeof entry[1] === "string") {
       // pojedynczy link
+      ul.className = "drop-menu";
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = entry[1];
