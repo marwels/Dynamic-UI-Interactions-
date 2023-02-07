@@ -1,23 +1,44 @@
 import "./style.css";
 
-jezeli value jest stringiem
-Object. entries keys values
+const contentParent = document.getElementById("content");
+
 const navTree = {
-    "dfgsdgsf": "dsfgsdfgg",
-    "Kategoria 1": {
-        "Pozycja 1": "http://sgdfg",
-        "Pozycja 2": "sdgdfg",
-        "Pozycja 3": {
-            "sdsfsdf": "sdfsdf",
-            "dfgsdfgsdg": "dgsdgsdf",
-            "sdfgdsfg": {
-                "ssdfgsdfg"
-            }
-        }
-    }
-}
-
-
+  style1: {
+    one: "http://www.example.com",
+    two: "http://www.example.com",
+    three: "http://www.example.com",
+    four: "http://www.example.com",
+    five: "http://www.example.com",
+  },
+  style2: {
+    one: "http://www.example.com",
+    two: "http://www.example.com",
+    three: "http://www.example.com",
+    four: "http://www.example.com",
+    five: "http://www.example.com",
+  },
+  style3: {
+    one: "http://www.example.com",
+    two: "http://www.example.com",
+    three: "http://www.example.com",
+    four: "http://www.example.com",
+    five: "http://www.example.com",
+  },
+  style4: {
+    one: "http://www.example.com",
+    two: "http://www.example.com",
+    three: "http://www.example.com",
+    four: "http://www.example.com",
+    five: "http://www.example.com",
+  },
+  // style5: {
+  //   one: "http://www.example.com",
+  //   two: "http://www.example.com",
+  //   three: {
+  //     moreLevels: "moreLevels",
+  //   },
+  // },
+};
 
 const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
   const ul = document.createElement("ul");
@@ -38,14 +59,16 @@ const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
 
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];
-    if (typeof entry[1] === "string") { // pojedynczy link
+    if (typeof entry[1] === "string") {
+      // pojedynczy link
       const li = document.createElement("li");
       const a = document.createElement("a");
-      a.href = values[i];
+      a.href = entry[1];
       a.innerText = entry[0];
       li.appendChild(a);
       ul.appendChild(li);
-    } else { // galaz drzewa
+    } else {
+      // galaz drzewa
       const li = document.createElement("li");
       li.innerText = entry[0];
 
@@ -58,7 +81,7 @@ const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
   return () => {
     children.forEach((destroy) => destroy());
     parentEl.removeChild(topMost);
-  }
+  };
 };
 
-
+Nav(contentParent, navTree);
