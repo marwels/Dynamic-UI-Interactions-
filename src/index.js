@@ -40,8 +40,14 @@ const navTree = {
   // },
 };
 
-const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
+const Nav = function Nav(
+  parentEl,
+  objectCategoriesLi,
+  className,
+  dontCreateNav
+) {
   const ul = document.createElement("ul");
+  ul.className = className || "mainUl";
   let topMost = ul;
 
   if (dontCreateNav !== true) {
@@ -61,7 +67,7 @@ const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
     const entry = entries[i];
     if (typeof entry[1] === "string") {
       // pojedynczy link
-      ul.className = "drop-menu";
+      // ul.className = `drop-menu`;
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = entry[1];
@@ -73,7 +79,7 @@ const Nav = function Nav(parentEl, objectCategoriesLi, dontCreateNav) {
       const li = document.createElement("li");
       li.innerText = entry[0];
 
-      children.push(Nav(li, entry[1], true));
+      children.push(Nav(li, entry[1], `drop-menu style${i}`, true));
 
       ul.appendChild(li);
     }
