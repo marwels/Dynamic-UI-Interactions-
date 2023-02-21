@@ -117,7 +117,6 @@ li:hover > ul.drop-menu.style0 li:nth-child(5) {
 /* STYLE2 */
 li:hover > ul.drop-menu.style1 {
   perspective: 1000px;
-  transform-origin: top center;
 }
 
 li:hover > ul.drop-menu.style1 li:nth-child(1) {
@@ -187,7 +186,6 @@ li:hover > ul.drop-menu.style1 li:nth-child(5) {
 /* STYLE3 */
 li:hover > ul.drop-menu.style2 {
   perspective: 1000px;
-  transform-origin: top center;
 }
 
 li:hover > ul.drop-menu.style2 li:nth-child(1) {
@@ -245,6 +243,73 @@ li:hover > ul.drop-menu.style2 li:nth-child(5) {
   }
   100% {
     transform: scale(1) translate(0px);
+    opacity: 100;
+  }
+}
+
+/* STYLE4 */
+li:hover > ul.drop-menu.style3 {
+  perspective: 1000px;
+}
+
+li:hover > ul.drop-menu.style3 li:nth-child(1) {
+  opacity: 0;
+  animation-name: menu4;
+  transform-origin: top right;
+  animation-duration: 300ms;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style3 li:nth-child(2) {
+  opacity: 0;
+  animation-name: menu4;
+  transform-origin: top right;
+  animation-duration: 300ms;
+  animation-delay: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style3 li:nth-child(3) {
+  opacity: 0;
+  animation-name: menu4;
+  transform-origin: top right;
+  animation-duration: 300ms;
+  animation-delay: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style3 li:nth-child(4) {
+  opacity: 0;
+  animation-name: menu4;
+  transform-origin: top right;
+  animation-duration: 300ms;
+  animation-delay: 450ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style3 li:nth-child(5) {
+  opacity: 0;
+  animation-name: menu4;
+  transform-origin: top right;
+  animation-duration: 300ms;
+  animation-delay: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu4 {
+  0% {
+    opacity: 0;
+    transform: rotate(-30deg) translateX(30px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0px);
     opacity: 100;
   }
 }
