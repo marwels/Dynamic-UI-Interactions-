@@ -183,3 +183,68 @@ li:hover > ul.drop-menu.style1 li:nth-child(5) {
     transform: rotateX(0deg);
   }
 }
+
+/* STYLE3 */
+li:hover > ul.drop-menu.style2 {
+  perspective: 1000px;
+  transform-origin: top center;
+}
+
+li:hover > ul.drop-menu.style2 li:nth-child(1) {
+  opacity: 0;
+  animation-name: menu3;
+  animation-duration: 300ms;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style2 li:nth-child(2) {
+  opacity: 0;
+  animation-name: menu3;
+  animation-duration: 300ms;
+  animation-delay: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style2 li:nth-child(3) {
+  opacity: 0;
+  animation-name: menu3;
+  animation-duration: 300ms;
+  animation-delay: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style2 li:nth-child(4) {
+  opacity: 0;
+  animation-name: menu3;
+  animation-duration: 300ms;
+  animation-delay: 450ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style2 li:nth-child(5) {
+  opacity: 0;
+  animation-name: menu3;
+  animation-duration: 300ms;
+  animation-delay: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu3 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(-60px);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1) translate(0px);
+    opacity: 100;
+  }
+}
