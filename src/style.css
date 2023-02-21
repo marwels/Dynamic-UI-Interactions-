@@ -58,10 +58,47 @@ li:hover > ul.drop-menu.style0 {
   perspective: 1000px;
 }
 
-li:hover > ul.drop-menu.style0 li {
+li:hover > ul.drop-menu.style0 li:nth-child(1) {
   opacity: 0;
   animation-name: menu1;
   animation-duration: 300ms;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style0 li:nth-child(2) {
+  opacity: 0;
+  animation-name: menu1;
+  animation-duration: 300ms;
+  animation-delay: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style0 li:nth-child(3) {
+  opacity: 0;
+  animation-name: menu1;
+  animation-duration: 300ms;
+  animation-delay: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style0 li:nth-child(4) {
+  opacity: 0;
+  animation-name: menu1;
+  animation-duration: 300ms;
+  animation-delay: 450ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu.style0 li:nth-child(5) {
+  opacity: 0;
+  animation-name: menu1;
+  animation-duration: 300ms;
+  animation-delay: 600ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
