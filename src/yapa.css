@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  --first-row-color: white;
+  --shadow-color: black;
+  --second-row-color: greenyellow;
+}
+
+body {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+
+  white-space: nowrap;
+
+  opacity: 1;
+  overflow: visible;
+}
+
+.LowerThirdContainer {
+  position: absolute;
+  top: 850px;
+  left: 150px;
+  width: 300px;
+  height: 200px;
+  color: #fff;
+  line-height: 1em;
+  /* background-color: palevioletred; */
+  z-index: -1;
+}
+
+.firstRow {
+  font-family: "Titan One", cursive;
+  font-size: 35px;
+  height: 24px;
+  color: var(--first-row-color);
+  text-shadow: -6px -6px var(--shadow-color), -5px -5px var(--shadow-color),
+    -4px -4px var(--shadow-color), -3px -3px var(--shadow-color),
+    -2px -2px var(--shadow-color), -1px -1px var(--shadow-color),
+    1px 1px var(--shadow-color), 2px 2px var(--shadow-color),
+    3px 3px var(--shadow-color), 4px 4px var(--shadow-color),
+    5px 5px var(--shadow-color), 6px 6px var(--shadow-color),
+    7px 7px var(--shadow-color), 8px 8px var(--shadow-color),
+    9px 9px var(--shadow-color), 10px 10px var(--shadow-color),
+    11px 11px var(--shadow-color), 12px 12px var(--shadow-color),
+    13px 13px var(--shadow-color), 14px 14px var(--shadow-color),
+    15px 15px var(--shadow-color), 16px 16px var(--shadow-color),
+    17px 17px var(--shadow-color), 18px 18px var(--shadow-color),
+    19px 19px var(--shadow-color), 20px 20px var(--shadow-color),
+    21px 21px var(--shadow-color), 22px 22px var(--shadow-color),
+    23px 23px var(--shadow-color), 24px 24px var(--shadow-color),
+    25px 25px var(--shadow-color), 26px 26px var(--shadow-color),
+    27px 27px var(--shadow-color), 25px 25px var(--shadow-color),
+    28px 28px var(--shadow-color), 29px 29px var(--shadow-color),
+    30px 30px var(--shadow-color), 31px 31px var(--shadow-color),
+    32px 32px var(--shadow-color), 33px 33px var(--shadow-color),
+    34px 34px var(--shadow-color), 35px 35px var(--shadow-color),
+    36px 36px var(--shadow-color), 37px 37px var(--shadow-color),
+    38px 38px var(--shadow-color), 39px 39px var(--shadow-color),
+    40px 40px var(--shadow-color);
+  animation: text-shadow 1.5s ease-in-out 1;
+}
+
+.secondRow {
+  display: flex;
+}
+
+.secondRowText {
+  font-family: "Jura", sans-serif;
+  font-size: 27px;
+  margin-left: 40px;
+  line-height: 29px;
+  height: 31px;
+  width: fit-content;
+  /* padding-right: 10px; */
+  color: var(--second-row-color);
+  background-color: var(--shadow-color);
+}
+
+.triangle {
+  border-style: solid;
+  border-width: 31px 0 0 31px;
+  border-color: transparent transparent transparent #000000;
+}
+
+/* @keyframes text-shadow-jaskowi-sie-nie-podoba {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+  }
+
+  20% {
+    transform: translateY(-1em);
+    text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b,
+    0 -0.25em 0 #fefc4b;
+  }
+
+  40% {
+    transform: translateY(0.5em);
+    text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
+      0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+  }
+  
+  60% {
+    transform: translateY(-0.25em);
+    text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd,
+    0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+  }
+  
+  80% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+  }
+} */
+
+/* SPIN */
+
+/* body {
+  perspective: 1000px;
+}
+.firstRow {
+  font-size: 50px;
+  text-align: center;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.firstRow::before,
+.firstRow::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: rotateY(0.5deg);
+  transform-origin: 0 50%;
+}
+.firstRow::after {
+  transform: rotateY(-0.5deg);
+  transform-origin: 100% 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes depth {
+  0% {
+    text-shadow: 0 0 black;
+  }
+  25% {
+    text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black;
+  }
+  50% {
+    text-shadow: 0 0 black;
+  }
+  75% {
+    text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black,
+      -5px 0 black;
+  }
+  100% {
+    text-shadow: 0 0 black;
+  }
+} */
