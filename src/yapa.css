@@ -2,7 +2,7 @@
   box-sizing: border-box;
   --first-row-color: white;
   --shadow-color: #000000;
-  --second-row-color: #26d668ff;
+  --second-row-color: #ffcd00ff;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
   overflow: visible;
 
   border: solid black;
+  background: #ccc;
 }
 
 .LowerThirdContainer {
@@ -38,52 +39,24 @@ body {
   font-size: 50px;
   height: 41px;
   color: var(--first-row-color);
-  text-shadow: -6px -6px var(--shadow-color), -5px -5px var(--shadow-color),
-    -4px -4px var(--shadow-color), -3px -3px var(--shadow-color),
-    -2px -2px var(--shadow-color), -1px -1px var(--shadow-color),
-    1px 1px var(--shadow-color), 2px 2px var(--shadow-color),
-    3px 3px var(--shadow-color), 4px 4px var(--shadow-color),
-    5px 5px var(--shadow-color), 6px 6px var(--shadow-color),
-    7px 7px var(--shadow-color), 8px 8px var(--shadow-color),
-    9px 9px var(--shadow-color), 10px 10px var(--shadow-color),
-    11px 11px var(--shadow-color), 12px 12px var(--shadow-color),
-    13px 13px var(--shadow-color), 14px 14px var(--shadow-color),
-    15px 15px var(--shadow-color), 16px 16px var(--shadow-color),
-    17px 17px var(--shadow-color), 18px 18px var(--shadow-color),
-    19px 19px var(--shadow-color), 20px 20px var(--shadow-color),
-    21px 21px var(--shadow-color), 22px 22px var(--shadow-color),
-    23px 23px var(--shadow-color), 24px 24px var(--shadow-color),
-    25px 25px var(--shadow-color), 26px 26px var(--shadow-color),
-    27px 27px var(--shadow-color), 25px 25px var(--shadow-color),
-    28px 28px var(--shadow-color), 29px 29px var(--shadow-color),
-    30px 30px var(--shadow-color), 31px 31px var(--shadow-color),
-    32px 32px var(--shadow-color), 33px 33px var(--shadow-color),
-    34px 34px var(--shadow-color), 35px 35px var(--shadow-color),
-    36px 36px var(--shadow-color), 37px 37px var(--shadow-color),
-    38px 38px var(--shadow-color), 39px 39px var(--shadow-color),
-    40px 40px var(--shadow-color), 41px 41px var(--shadow-color),
-    42px 42px var(--shadow-color), 43px 43px var(--shadow-color),
-    44px 44px var(--shadow-color), 45px 45px var(--shadow-color),
-    46px 46px var(--shadow-color), 47px 47px var(--shadow-color),
-    48px 48px var(--shadow-color), 49px 49px var(--shadow-color),
-    50px 50px var(--shadow-color), 51px 51px var(--shadow-color),
-    52px 52px var(--shadow-color), 53px 53px var(--shadow-color),
-    54px 54px var(--shadow-color), 55px 55px var(--shadow-color),
-    56px 56px var(--shadow-color), 57px 57px var(--shadow-color),
-    58px 58px var(--shadow-color), 59px 59px var(--shadow-color),
-    60px 60px var(--shadow-color), 61px 61px var(--shadow-color),
-    62px 62px var(--shadow-color), 63px 63px var(--shadow-color);
-  animation: text-shadow 1.5s ease-in-out 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* animation: text-shadow 1.5s ease-in-out; */
 }
 
 .secondRow {
   display: flex;
+  opacity: 1;
+  /* transition: opacity 0.8s ease-in-out 0.5s; */
+  position: absolute;
+  top: 41px;
+  left: 57px;
 }
 
 .secondRowText {
   font-family: "Jura", sans-serif;
   font-size: 39px;
-  margin-left: 57px;
   line-height: 39px;
   height: 41px;
   width: fit-content;
@@ -94,17 +67,34 @@ body {
 
 .triangle {
   border-style: solid;
-  border-width: 31px 0 0 31px;
+  border-width: 39px 0 0 39px;
   border-color: transparent transparent transparent #000000;
 }
 
-.firstRow {
-  animation-duration: 2s;
+.firstRow.jump {
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   transform-origin: bottom;
   animation-name: bounce;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-fill-mode: forwards;
 }
+
+.firstRow.shadow {
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-iteration-count: 1;
+  animation-name: black-shadow;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* .LowerThirdContainer:hover .firstRow,
+.LowerThirdContainer:hover .secondRow {
+  opacity: 0;
+  transition: opacity 0.5s 0.2s;
+} */
+
 @keyframes bounce {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -116,16 +106,16 @@ body {
   }
 
   20% {
-    text-shadow: 0 0.125em 0 #060955ff, 0 0.25em 0 #03d3f5ff,
-      0 -0.125em 0 #fe3e66ff, 0 -0.25em 0 #ffcd00ff;
+    text-shadow: 0 0.25em 0 #060955ff, 0 0.5em 0 #03d3f5ff,
+      0 -0.25em 0 #fe3e66ff, 0 -0.5em 0 #ffcd00ff;
   }
 
   30% {
     transform: scale(0.9, 1.1) translateY(-50px);
   }
   40% {
-    text-shadow: 0 -0.0625em 0 #060955ff, 0 -0.125em 0 #03d3f5ff,
-      0 0.0625em 0 #fe3e66ff, 0 0.125em 0 #ffcd00ff;
+    text-shadow: 0 -0.125em 0 #060955ff, 0 -0.25em 0 #03d3f5ff,
+      0 0.125em 0 #fe3e66ff, 0 0.25em 0 #ffcd00ff;
   }
   50% {
     transform: scale(1.05, 0.95) translateY(0);
@@ -136,13 +126,11 @@ body {
       0 -0.03125em 0 #fe3e66ff, 0 -0.0625em 0 #ffcd00ff;
   }
   60% {
-    text-shadow: 0 0.03125em 0 #060955ff, 0 0.0625em 0 #03d3f5ff,
-      0 -0.03125em 0 #fe3e66ff, 0 -0.0625em 0 #ffcd00ff;
+    text-shadow: 0 0.0625em 0 #060955ff, 0 0.125em 0 #03d3f5ff,
+      0 -0.0625em 0 #fe3e66ff, 0 -0.125em 0 #ffcd00ff;
   }
   64% {
     transform: scale(1, 1) translateY(0);
-    text-shadow: 0 0 0 #060955ff, 0 0 0 #03d3f5ff, 0 0 0 #fe3e66ff,
-      0 0 0 #ffcd00ff;
   }
   80% {
     text-shadow: 0 0 0 #060955ff, 0 0 0 #03d3f5ff, 0 0 0 #fe3e66ff,
@@ -152,7 +140,51 @@ body {
     transform: scale(1, 1) translateY(0);
   }
 }
-/* @keyframes text-shadow-jaskowi-sie-nie-podoba {
+
+@keyframes black-shadow {
+  0% {
+    text-shadow: 0 0 0 var(--shadow-color);
+  }
+
+  100% {
+    text-shadow: -6px -6px var(--shadow-color), -5px -5px var(--shadow-color),
+      -4px -4px var(--shadow-color), -3px -3px var(--shadow-color),
+      -2px -2px var(--shadow-color), -1px -1px var(--shadow-color),
+      1px 1px var(--shadow-color), 2px 2px var(--shadow-color),
+      3px 3px var(--shadow-color), 4px 4px var(--shadow-color),
+      5px 5px var(--shadow-color), 6px 6px var(--shadow-color),
+      7px 7px var(--shadow-color), 8px 8px var(--shadow-color),
+      9px 9px var(--shadow-color), 10px 10px var(--shadow-color),
+      11px 11px var(--shadow-color), 12px 12px var(--shadow-color),
+      13px 13px var(--shadow-color), 14px 14px var(--shadow-color),
+      15px 15px var(--shadow-color), 16px 16px var(--shadow-color),
+      17px 17px var(--shadow-color), 18px 18px var(--shadow-color),
+      19px 19px var(--shadow-color), 20px 20px var(--shadow-color),
+      21px 21px var(--shadow-color), 22px 22px var(--shadow-color),
+      23px 23px var(--shadow-color), 24px 24px var(--shadow-color),
+      25px 25px var(--shadow-color), 26px 26px var(--shadow-color),
+      27px 27px var(--shadow-color), 25px 25px var(--shadow-color),
+      28px 28px var(--shadow-color), 29px 29px var(--shadow-color),
+      30px 30px var(--shadow-color), 31px 31px var(--shadow-color),
+      32px 32px var(--shadow-color), 33px 33px var(--shadow-color),
+      34px 34px var(--shadow-color), 35px 35px var(--shadow-color),
+      36px 36px var(--shadow-color), 37px 37px var(--shadow-color),
+      38px 38px var(--shadow-color), 39px 39px var(--shadow-color),
+      40px 40px var(--shadow-color), 41px 41px var(--shadow-color),
+      42px 42px var(--shadow-color), 43px 43px var(--shadow-color),
+      44px 44px var(--shadow-color), 45px 45px var(--shadow-color),
+      46px 46px var(--shadow-color), 47px 47px var(--shadow-color),
+      48px 48px var(--shadow-color), 49px 49px var(--shadow-color),
+      50px 50px var(--shadow-color), 51px 51px var(--shadow-color),
+      52px 52px var(--shadow-color), 53px 53px var(--shadow-color),
+      54px 54px var(--shadow-color), 55px 55px var(--shadow-color),
+      56px 56px var(--shadow-color), 57px 57px var(--shadow-color),
+      58px 58px var(--shadow-color), 59px 59px var(--shadow-color),
+      60px 60px var(--shadow-color), 61px 61px var(--shadow-color),
+      62px 62px var(--shadow-color), 63px 63px var(--shadow-color);
+  }
+}
+/* @keyframes text-shadow-original {
   0% {
     transform: translateY(0);
     text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
