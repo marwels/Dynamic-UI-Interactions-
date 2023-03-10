@@ -56,12 +56,6 @@ body {
   position: absolute;
   top: 41px;
   left: 57px;
-  animation-duration: 0.3s;
-  animation-delay: 1.5s;
-  animation-iteration-count: 1;
-  animation-name: emerge;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
 }
 
 .secondRowText {
@@ -80,7 +74,9 @@ body {
   border-color: transparent transparent transparent #000000;
 }
 
-.firstRow.jump {
+/* ANIMATION */
+
+.LowerThirdContainer.on .firstRow.jump {
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   transform-origin: bottom;
@@ -89,7 +85,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-.firstRow.shadow {
+.LowerThirdContainer.on .firstRow.shadow {
   animation-duration: 1s;
   animation-delay: 0.7s;
   animation-iteration-count: 1;
@@ -97,6 +93,20 @@ body {
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.LowerThirdContainer.on .secondRow {
+  animation-duration: 0.3s;
+  animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-name: emerge;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.LowerThirdContainer.off {
+  opacity: 0;
+  transition: opacity 0.5s 0.2s;
 }
 
 @keyframes bounce {
@@ -200,6 +210,7 @@ body {
     opacity: 1;
   }
 }
+
 /* @keyframes text-shadow-original {
   0% {
     transform: translateY(0);
