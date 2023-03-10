@@ -22,11 +22,20 @@ body {
   background: #ccc;
 }
 
-.LowerThirdContainer {
+.left {
   position: absolute;
   top: 850px;
   left: 150px;
-  width: 300px;
+  width: 700px;
+  height: 200px;
+  color: #fff;
+  line-height: 1em;
+}
+.right {
+  position: absolute;
+  top: 850px;
+  right: 150px;
+  width: 700px;
   height: 200px;
   color: #fff;
   line-height: 1em;
