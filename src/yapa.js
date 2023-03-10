@@ -18,7 +18,7 @@ const LowerThird = function Nav(parentEl) {
   const secondRow = document.createElement("div");
   secondRow.className = "secondRow";
   const secondRowText = document.createElement("div");
-  secondRowText.innerText = "dobrze jest nie być głodnym";
+  secondRowText.innerText = "dobrze jest";
   secondRowText.className = "secondRowText";
   secondRow.appendChild(secondRowText);
   const triangle = document.createElement("div");
