@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  margin: 2rem;
+  font-size: 5rem;
+}
+
+.primary-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.primary-navigation li {
+  list-style: none;
+}
+
+.primary-navigation li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  display: block;
+}
+
+.primary-navigation li:hover {
+  background-color: #555;
+}
