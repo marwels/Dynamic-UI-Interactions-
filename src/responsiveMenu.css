@@ -21,10 +21,20 @@ body {
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 header {
   justify-content: space-between;
   align-items: center;
-  background-color: #0f1f29;
+  /* background-color: #0f1f29; */
   color: white;
 }
 
@@ -34,8 +44,13 @@ header {
 }
 
 .primary-navigation {
-  background: hsl(0 0% 100% / 0.1);
-  backdrop-filter: blur(1rem);
+  background: hsl(0 0% 0% / 0.7);
+}
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
 }
 
 .primary-navigation ul {
