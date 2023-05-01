@@ -39,3 +39,5 @@ const contentParent = document.getElementById("content");
 // Nav(contentParent, navTree);
 
 // LowerThird(contentParent);
+
+responsiveMenu();
