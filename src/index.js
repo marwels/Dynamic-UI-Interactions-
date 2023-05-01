@@ -1,5 +1,6 @@
 // import "./dropDownStyle.css";
 import "./responsiveMenu.css";
+import responsiveMenu from "./responsiveMenu";
 import Nav from "./dropDownMenu";
 import { navTree } from "./dropDownMenu";
 import LowerThird from "./yapa";
