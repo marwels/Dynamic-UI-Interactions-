@@ -42,6 +42,9 @@ header {
   margin: 2rem;
   font-size: 3rem;
 }
+.mobile-nav-toggle {
+  display: none;
+}
 
 .primary-navigation {
   background: hsl(0 0% 0% / 0.7);
@@ -82,5 +85,23 @@ header {
     inset: 0 0 0 30%;
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
+    z-index: 1000;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    color: white;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    top: 1rem;
+    right: 2rem;
+    z-index: 9999;
+    background: none;
+    text-align: center;
+    line-height: 2rem;
+    padding: 1px 6px;
+    border-width: none;
+    border-style: none;
+    font-size: 2.5rem;
   }
 }
